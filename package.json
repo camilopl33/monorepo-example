@@ -8,7 +8,9 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
+    "dev": "turbo run dev",
+    "dev:web": "turbo run dev --filter web",
+    "dev:docs": "turbo run dev --filter docs",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
@@ -20,6 +22,22 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "dependencies": {},
-  "packageManager": "yarn@1.22.19"
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/material": "^5.10.7",
+    "@reduxjs/toolkit": "^1.8.5",
+    "docs": "^0.3.2-canary.0",
+    "next-redux-wrapper": "^8.0.0",
+    "react-redux": "^8.0.4",
+    "web": "^0.0.2"
+  },
+  "packageManager": "yarn@1.22.19",
+  "prettier": {
+    "trailingComma": "none",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "bracketSpacing": true
+  }
 }
